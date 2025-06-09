@@ -1,0 +1,16 @@
+num1 = int(input("Digite o inicio: "))
+num2 = int(input('Digite o final: '))
+soma = 0
+tempar = False
+
+for i in range(num1, num2 +1):
+    if i % 2 == 0:
+        soma += i
+        tempar = True
+else:
+     if tempar == False:
+         print('Não tem nenhum numero par')
+
+print(soma)
+
+
