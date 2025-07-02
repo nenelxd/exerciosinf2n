@@ -1,0 +1,7 @@
+contatos = {
+     'nome' : str(input('Digite o nome: ')),
+     'telefone' : int(input('Digite o telefone: ')),
+     'e-mail' : str(input('Digite o e-mail: '))
+}
+
+print(f'Nome: {contatos["nome"]} \nTelefone: {contatos["telefone"]} \nE-mail: {contatos["e-mail"]}')
