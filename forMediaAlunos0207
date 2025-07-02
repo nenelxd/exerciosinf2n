@@ -1,0 +1,25 @@
+listaalunos = []
+mediageral = 0
+
+for i in range(int(input('Digite a quantidade de alunos: '))):
+    nome =  str(input('Digite o nome do aluno: '))
+    notas = []
+    for nota in range(3):
+            nota = float(input('Digite a nota: '))
+            notas.append(nota)
+    media = sum(notas) / len(notas)
+    if media >= 7:
+        status = 'Aprovado'
+    else:
+        status = 'Reprovado'
+    listaalunos.append([nome, notas, media, status])
+    mediageral += media
+
+for aluno in listaalunos:
+     nome, notas, media, status = aluno
+     print(f'Nome: {nome}')
+     print(f'Notas: {notas}')
+     print(f'Média: {media:.2f}')
+     print(f'Status: {status}')
+     print(f'------------------')
+print(f'A média geral é: {mediageral:.2f}')
