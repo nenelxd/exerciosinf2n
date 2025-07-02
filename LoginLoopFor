@@ -1,0 +1,17 @@
+tentativas = 2
+
+login = str(input('Digite o login: '))
+senha = str(input('Digite a senha: '))
+
+while login != 'admin' and senha != 'root':
+        if tentativas != 0:              
+            print(f'Credênciais incorrentas, você tem mais {(tentativas)} tentativas')
+            tentativas -= 1
+            login = str(input('Digite o login: '))
+            senha = str(input('Digite a senha: '))
+        else:
+            for i in range(3):
+                print('Acesso negado')
+            break
+else:
+    print('Bem vindo ao sistema')
