@@ -1,0 +1,13 @@
+compras = {         
+}
+
+precofinal = []
+
+for i in range(1, 6, 1):
+        produto = str(input(f'Digite o produto {i}: '))
+        preco = float(input(f'Digite o preço {i}: '))
+        precofinal.append(preco)
+        item = {produto : preco,}
+        compras.update(item)
+
+print(f'A sua lista de compras completa:{compras} e o preço final de todos os produtos é R${sum(precofinal):.2f}')
